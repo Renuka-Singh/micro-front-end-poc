@@ -5,18 +5,18 @@ module.exports = {
         name: 'name',
         message: 'What is the name of the new project',
         default: this.outFolder,
-        filter: val => val.toLowerCase(),
+        filter: (val) => val.toLowerCase(),
       },
       {
         name: 'description',
         message: 'How would you describe the new project',
-        default: `my Awesome project`,
+        default: 'my Awesome project',
       },
       {
         name: 'username',
         message: 'What is your GitHub username',
         default: this.gitUser.username || this.gitUser.name,
-        filter: val => val.toLowerCase(),
+        filter: (val) => val.toLowerCase(),
         store: true,
       },
       {

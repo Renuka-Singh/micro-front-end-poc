@@ -13,17 +13,13 @@ console.log(standAloneAppHistory);
 const secondaryHeaderData = (history, baseRoute) => ({
   lowerHead: {
     tabs: {
-      onSelection: event => {
+      onSelection: (event) => {
         history.push(event.key);
       },
       options: [
         {
-          key: `${baseRoute}/dps`,
-          value: 'Dispatch Plans',
-        },
-        {
-          key: `${baseRoute}/stocks`,
-          value: 'Stocks',
+          key: `${baseRoute}/categories`,
+          value: 'Base Categories',
         },
       ],
     },
@@ -38,11 +34,11 @@ const getSecondaryHeader = (history, baseRoute) => {
   return template;
 };
 
-export default (history = standAloneAppHistory, baseRoute = '') => {
+const getApp = (history = standAloneAppHistory, baseRoute = '') => {
   console.log('GET APP');
   console.log({ standAloneAppHistory });
   return (
-    <Router history={history}>
+    <Router history={history} basename={baseRoute}>
       {getSecondaryHeader(history, baseRoute)}
       <div style={{ padding: '1rem 2.5rem' }}>
         <RoutesContainer baseRoute={baseRoute} />
@@ -50,3 +46,5 @@ export default (history = standAloneAppHistory, baseRoute = '') => {
     </Router>
   );
 };
+
+export default getApp;

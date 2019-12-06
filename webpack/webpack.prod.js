@@ -8,10 +8,10 @@ const commonPaths = require('./paths');
 module.exports = {
   mode: 'production',
   output: {
-    filename: `${commonPaths.jsFolder}/dcms-index.js`,
+    filename: `${commonPaths.jsFolder}/cat-index.js`,
     path: commonPaths.outputPath,
     chunkFilename: `${commonPaths.jsFolder}/[name].js`,
-    library: 'dcms',
+    library: 'cat',
     libraryTarget: 'umd',
   },
   optimization: {

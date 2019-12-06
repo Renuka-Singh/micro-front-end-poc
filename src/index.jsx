@@ -7,6 +7,10 @@ import getApp from './App.jsx';
 const DEV_MODE = false;
 
 console.log('Awesome', Link);
+// basRoute - "/app/catalouge"
+// current child app routes
+// /categories
+// /categories/new
 
 export const initDCMS = (history, baseRoute) => {
   console.log('DCMS INITIALIZED');
@@ -16,5 +20,6 @@ export const initDCMS = (history, baseRoute) => {
 };
 
 if (DEV_MODE) {
+  console.log("DEV");
   ReactDOM.render(getApp(), document.getElementById('app'));
 }
