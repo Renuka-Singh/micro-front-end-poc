@@ -11,42 +11,18 @@ class AddCategory extends Component {
   render() {
     return (
       <>
-        <div
-          style={{
-            'marginTop': '5px',
-            'marginBottom': '5px',
-            'marginLeft': '8px',
-            'marginRight': '8px',
-            padding: '0 16px',
-          }}
-        >
+        <div>
           <Button type="primary">
             <Icon type="left" />
-            <NavLink to="/categories">
+            <NavLink to={`${this.props.baseRoute}/categories`}>
               <font color="white">Back </font>
             </NavLink>
           </Button>
         </div>
-        <Card
-          style={{
-            'margin-top': '5px',
-            'margin-bottom': '5px',
-            'margin-left': '8px',
-            'margin-right': '8px',
-            padding: '0 16px',
-          }}
-        >
+        <Card>
           <Title level={3}>ADD NEW CATEGORY</Title>
         </Card>
-        <Card
-          style={{
-            flex: '0 0 200px',
-            margin: '10px',
-            display: 'flex',
-            'flex-direction': 'column',
-            'justify-content': 'center',
-          }}
-        >
+        <Card>
           <Form />
         </Card>
       </>

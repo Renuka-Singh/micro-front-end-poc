@@ -6,7 +6,8 @@ import RoutesContainer from './RoutesContainer';
 
 const standAloneAppHistory = createBrowserHistory();
 
-console.log(standAloneAppHistory);
+// eslint-disable-next-line quotes
+console.log('History', standAloneAppHistory);
 
 // eslint-disable-next-line no-lone-blocks
 
@@ -36,6 +37,8 @@ const getSecondaryHeader = (history, baseRoute) => {
 
 const getApp = (history = standAloneAppHistory, baseRoute = '') => {
   console.log('GET APP');
+  // console.log("History",history);
+  // console.log("Base Route",baseRoute);
   console.log({ standAloneAppHistory });
   return (
     <Router history={history} basename={baseRoute}>

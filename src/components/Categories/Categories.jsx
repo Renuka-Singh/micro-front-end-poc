@@ -75,9 +75,9 @@ class Categories extends Component {
         this.setProducts(
           name
             ? response.base_categories.map(product => ({
-                key: product.name,
-                label: product.name,
-              }))
+              key: product.name,
+              label: product.name,
+            }))
             : [],
         );
       });
@@ -86,6 +86,7 @@ class Categories extends Component {
   componentWillMount(){
     console.log("will cmout");
   }
+  // eslint-disable-next-line lines-between-class-members
   render() {
     const basicDataFixture = {
       filtersList: [

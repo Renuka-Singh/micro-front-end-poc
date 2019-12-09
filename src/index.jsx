@@ -12,8 +12,8 @@ console.log('Awesome', Link);
 // /categories
 // /categories/new
 
-export const initDCMS = (history, baseRoute) => {
-  console.log('DCMS INITIALIZED');
+export const initCataloguing = (history, baseRoute) => {
+  console.log('CATALOGUING INITIALIZED');
   const appToRender = getApp(history, baseRoute);
   console.log(appToRender);
   return appToRender;

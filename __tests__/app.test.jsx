@@ -2,7 +2,6 @@ import React from 'react';
 import { mount } from 'enzyme';
 
 import App from '../src/App';
-import HelloWorld from '../src/components/DispatchPlans';
 
 describe('<App />', () => {
   const wrap = mount(<App />);

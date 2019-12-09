@@ -17,8 +17,8 @@ class Category extends Component {
           flex: '0 0 200px',
           margin: '10px',
           display: 'flex',
-          'flex-direction': 'column',
-          'justify-content': 'center',
+          'flexDirection': 'column',
+          'justifyContent': 'center',
         }}
       >
         <div

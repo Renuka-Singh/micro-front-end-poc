@@ -15,14 +15,14 @@ const RoutesContainer = (props) => {
   return (
     // eslint-disable-next-line react/jsx-filename-extension
     <Switch>
-    <Route
+      <Route
       exact
       path={`${props.baseRoute}/categories`}
       component={(selfProps) => <Categories {...selfProps} baseRoute={props.baseRoute} />} />
       <Route
         path={`${props.baseRoute}/categories/new`}
-        component={AddCategory} />
-    <Redirect exact from="/" to={`${props.baseRoute}/categories`} />
+        component={(selfProps) => <AddCategory {...selfProps} baseRoute={props.baseRoute} /> } />
+      <Redirect from="/" to={`${props.baseRoute}/categories`} />
     </Switch>
   );
 };
